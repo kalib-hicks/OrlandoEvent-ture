@@ -15,20 +15,6 @@ const Results = () => {
 
   const events = data?.searchEvents || {};
 
-<<<<<<< HEAD
-    if (loading) {
-        return(
-            <div className='d-flex flex-column justify-content-center align-items-center'>
-                <Spinner animation='border' variant='primary' className='my-3' />
-                <h1 style={{color: 'black', display: 'inline'}}>Loading...</h1>
-            </div>
-        );
-    }
-
-  if (!events.length) {
-    return <CardDeck id="results" className='my-2 event-card w-100 h-100'><Card.Title>There aren't any events in this city yet</Card.Title></CardDeck>
-
-=======
   if (loading) {
     return (
       <div className='d-flex flex-column justify-content-center align-items-center'>
@@ -40,7 +26,6 @@ const Results = () => {
 
   if (!events.length) {
     return <CardDeck id="results" className='my-2 event-card w-100 h-100'><Card.Title>There aren't any events in this city yet</Card.Title></CardDeck>;
->>>>>>> develop
   }
 
 
@@ -70,17 +55,11 @@ const Results = () => {
                     </>
                   )}
                   <Card.Text>{event.description}</Card.Text>
-<<<<<<< HEAD
-                  <Button variant='primary'>
-                    <Link to={`/event/${event._id}`} style={{ color: 'white', textDecoration: 'none' }}>View Event</Link>
-                  </Button>
-=======
                   <Link to={`/event/${event._id}`} style={{ color: 'white', textDecoration: 'none' }}>
                     <Button variant='primary'>
                       View Event
                   </Button>
                   </Link>
->>>>>>> develop
                 </Card.Body>
               </Card>
             ))}
