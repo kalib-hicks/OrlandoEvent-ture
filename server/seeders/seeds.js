@@ -6,7 +6,7 @@ db.once('open', async () => {
   await Event.deleteMany({});
   await User.deleteMany({});
 
-  // user data
+  // create user data
   const userData = [];
 
   for (let i = 0; i < 50; i += 1) {
@@ -20,21 +20,35 @@ db.once('open', async () => {
 
   const createdUsers = await User.collection.insertMany(userData);
 
+  // create friends
+  for (let i = 0; i < 100; i += 1) {
+    const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
+    const { _id: userId } = createdUsers.ops[randomUserIndex];
 
-  // event
+    let friendId = userId;
+
+    while (friendId === userId) {
+      const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
+      friendId = createdUsers.ops[randomUserIndex];
+    }
+
+    await User.updateOne({ _id: userId }, { $addToSet: { friends: friendId } });
+  }
+
+  // create events
   let createdEvents = [];
   for (let i = 0; i < 100; i += 1) {
     const regEx = /-/g;
     const name = faker.lorem.slug().replace(regEx, ' ');
     
 
-    
+    // generates random timestamp and then formates into a readable time
     const timeStamp = faker.time.recent();
-   
+    // turns argument into milliseconds instead of seconds and then converts date
     const newDate = new Date(timeStamp);
     const date = new Intl.DateTimeFormat('en-US').format(newDate);
 
- 
+    // turns argument into milliseconds instead of seconds and then converts time
     const newTime = new Date(timeStamp);
     const time = newTime.toLocaleTimeString('en-us');
 
@@ -55,6 +69,9 @@ db.once('open', async () => {
         date, 
         time, 
         address,
+        city,
+        state,
+        zip,
         description,
         username, 
         image
@@ -68,7 +85,7 @@ db.once('open', async () => {
     createdEvents.push(createdEvent);
   }
 
-  // commenting
+  // create comment
   for (let i = 0; i < 100; i += 1) {
     const commentText = faker.lorem.words(Math.round(Math.random() * 20) + 1);
 
@@ -85,7 +102,7 @@ db.once('open', async () => {
     );
   }
 
-  // RSVP
+  // populate attendees
   for (let i = 0; i < 100; i += 1) {
     const randomUserIndex = Math.floor(Math.random() * createdUsers.ops.length);
     const { _id: userId } = createdUsers.ops[randomUserIndex];
@@ -99,6 +116,6 @@ db.once('open', async () => {
     )
   }
 
-  console.log('Event Created!');
+  console.log('all done!');
   process.exit(0);
 });

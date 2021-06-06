@@ -1,7 +1,5 @@
-//imorting templates
-
 const { gql } = require('apollo-server-express');
-
+// import the gql tagged template function
 const typeDefs = gql`
     type Auth {
         token: ID!
@@ -22,6 +20,9 @@ const typeDefs = gql`
         date: String!
         time: String!
         address: String!
+        city: String!
+        state: String!
+        zip: String!
         description: String!
     }
     type Event {
@@ -31,6 +32,9 @@ const typeDefs = gql`
         date: String!
         time: String!
         address: String!
+        city: String!
+        state: String!
+        zip: String!
         description: String!
         image: String
         attendees: [User]
