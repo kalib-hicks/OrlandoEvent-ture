@@ -1,10 +1,6 @@
 const { Schema, model } = require('mongoose');
 const commentSchema = require('./Comment');
 const dateFormat = require('../utils/dateFormat');
-<<<<<<< HEAD
-const timeFormat = require('../utils/timeFormat');
-=======
->>>>>>> develop
 
 const eventSchema = new Schema(
   {
@@ -26,21 +22,13 @@ const eventSchema = new Schema(
       required: true
     },
     time: {
-<<<<<<< HEAD
-      type: Date,
-      default: Date.now,
-      get: timestamp => timeFormat(timestamp)
-=======
       type: String,
       required: true
->>>>>>> develop
     },
     address: {
       type: String,
       required: true
     },
-<<<<<<< HEAD
-=======
     city: {
       type: String,
       required: true
@@ -53,7 +41,6 @@ const eventSchema = new Schema(
       type: String,
       required: true
     },
->>>>>>> develop
     description: {
       type: String,
       required: true
@@ -76,8 +63,6 @@ const eventSchema = new Schema(
   }
 );
 
-<<<<<<< HEAD
-=======
 eventSchema.pre('save', async function(next) {
   if (this.isNew) {
     const newDate = new Date(this.date);
@@ -98,7 +83,6 @@ eventSchema.pre('save', async function(next) {
   next();
 });
 
->>>>>>> develop
 eventSchema.virtual('commentCount').get(function () {
   return this.comments.length;
 });
