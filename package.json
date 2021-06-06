@@ -1,5 +1,5 @@
 {
-  "name": "project-gaia",
+  "name": "orlandoevent-ture",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "server/server.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/einalem4/project-gaia.git"
+    "url": "git+https://github.com/kalib-hicks/orlandoevent-ture.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/einalem4/project-gaia/issues"
+    "url": "https://github.com/kalib-hicks/orlandoevent-ture/issues"
   },
-  "homepage": "https://github.com/einalem4/project-gaia#readme",
+  "homepage": "https://github.com/kalib-hicks/orlandoevent-ture#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^10.0.0",
