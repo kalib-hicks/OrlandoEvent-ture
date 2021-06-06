@@ -11,9 +11,6 @@ const CreateEvent = () => {
     date: '',
     time: '',
     address: '',
-    city: '',
-    state: '',
-    zip: '',
     description: ''
   };
 
