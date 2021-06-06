@@ -5,7 +5,11 @@ import { ADD_USER } from "../utils/mutations";
 import { Button } from 'react-bootstrap';
 import Auth from "../utils/auth";
 
+<<<<<<< HEAD
 const Signup =() => {
+=======
+const Signup = () => {
+>>>>>>> develop
   const [formState, setFormState] = useState({ username: '', email: '', password: '' });
   const [addUser, { error }] = useMutation(ADD_USER);
 
@@ -76,11 +80,19 @@ const Signup =() => {
         <Button variant='secondary' type='submit' className='w-100 my-2'>
           Sign Up
         </Button>
+<<<<<<< HEAD
         <Button variant='outline-primary' className='w-100 login-btn' >
           <Link to="/login" style={{textDecoration: 'none'}}>
             Login
           </Link>
         </Button>
+=======
+        <Link to="/login">
+          <Button variant='primary' className='w-100 login-btn' >
+            Login
+          </Button>
+        </Link>
+>>>>>>> develop
       </form>
       {error && <div>Signup failed</div>}
     </div>

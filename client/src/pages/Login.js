@@ -67,11 +67,19 @@ function Login(props) {
           Login
         </Button>
 
+<<<<<<< HEAD
         <Button variant='outline-primary' className='w-100 signup-btn' >
           <Link to="/signup" style={{textDecoration: 'none'}}>
             Sign Up
           </Link>
         </Button>
+=======
+        <Link to="/signup">
+          <Button variant='primary' className='w-100 signup-btn' >
+            Sign Up
+          </Button>
+        </Link>
+>>>>>>> develop
 
       </form>
     </div>

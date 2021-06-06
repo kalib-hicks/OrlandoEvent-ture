@@ -1,6 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import { GoogleMap, useLoadScript, withGoogleMap, Marker } from '@react-google-maps/api';
 import { geoCode } from '../../utils/API';
+=======
+import { GoogleMap, useLoadScript} from '@react-google-maps/api';
+// import { geoCode } from '../../utils/API';
+>>>>>>> develop
 
 const mapContainerStyle = {
     width: '100%',
@@ -18,7 +23,11 @@ const options = {
 }
 
 const ResultsMap = props => {
+<<<<<<< HEAD
     const {mapData} = props;
+=======
+    // const {mapData} = props;
+>>>>>>> develop
 
     // const getGeoCode = async (city) => {
     //     const response = await geoCode(city);
