@@ -1,14 +1,14 @@
 // overwrite variables here
-$primary: #2a9de6;
-$secondary: #46b04d;
+$primary: #f0df45;
+$secondary: #f78a0e;
 $success: #46b04d;
-$warning: #e9c46a;
-$dark-blue: #0e6499;
+$warning: #c2322d;
+$dark-blue: #e28a06;
 $light-grey: rgb(235, 235, 235);
 $mid-grey: rgb(105, 105, 105);
 $dark-grey: rgb(50, 50, 50);
 
-$font-family-base: "dolly-new", serif;
+$font-family-base: "helvetica", sans-serif;
 
 $navbar-brand-font-size: 2rem;
 $nav-link-font-size: 1.25rem;
@@ -47,7 +47,7 @@ h6 {
 }
 
 .navbar-brand {
-  font-family: "lust", serif;
+  font-family: "helvetica", serif;
   color: white;
   text-align: center;
 }
