@@ -5,7 +5,7 @@ import { Card, Container, Row, Col } from 'react-bootstrap';
 
 const EventList = ({ events }) => {
   if (!events.length) {
-    return <Card.Body><Card.Text><h3>You have not created any events yet</h3></Card.Text></Card.Body>;
+    return <Card.Body><Card.Text><h3>Create your first Orlando based event!</h3></Card.Text></Card.Body>;
   }
 
   return (
