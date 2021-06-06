@@ -6,7 +6,7 @@ const Home = () => {
     return(
         <>
             <Search />
-            <About />
+            <Search />
         </>
     );
 };
