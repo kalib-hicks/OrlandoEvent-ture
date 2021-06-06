@@ -59,7 +59,7 @@ function Login(props) {
         </div>
         {
           error ? <div>
-            <p className="error-text" >The provided credentials are incorrect</p>
+            <p className="error-text" >Incorrect login attempt</p>
           </div> : null
         }
 
@@ -69,7 +69,7 @@ function Login(props) {
 
         <Link to="/signup">
           <Button variant='primary' className='w-100 signup-btn' >
-            Sign Up
+            Register
           </Button>
         </Link>
 
