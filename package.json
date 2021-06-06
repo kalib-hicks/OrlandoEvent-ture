@@ -1,8 +1,12 @@
 {
   "name": "orlandoevent-ture",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "server/server.js",
+  
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "cd server && npm start",
