@@ -1,51 +1,41 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient from 'apollo-boost';
-
-import Home from "./pages/Home";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import Nav from "./components/Nav";
-import { StoreProvider } from "./utils/GlobalState";
-import Success from "./pages/Success";
-import OrderHistory from "./pages/OrderHistory";
-
-const client = new ApolloClient({
-  request: (operation) => {
-    const token = localStorage.getItem('id_token')
-    operation.setContext({
-      headers: {
-        authorization: token ? `Bearer ${token}` : ''
-      }
-    })
-  },
-  uri: '/graphql',
-})
+import logo from './logo.svg';
+import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
+import Student from './components/showStudent/showStudent.js';
+import Create from './components/createStudent/createStudent.js';
+import './App.css';
+import useStyles from './styles';
 
 function App() {
+ const classes = useStyles();
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <div>
-          <StoreProvider>
-            <Nav />
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={Signup} />
-              <Route exact path="/success" component={Success} />
-              <Route exact path="/orderHistory" component={OrderHistory} />
-              <Route exact path="/products/:id" component={Detail} />
-              <Route component={NoMatch} />
-            </Switch>
-          </StoreProvider>
-        </div>
-      </Router>
-    </ApolloProvider>
+    <div className="App">
+      <Container maxWidth="lg">
+        <AppBar className={classes.appBar} position="static" color="inherit" >
+          <Typography className={classes.heading} variant="h2" align="center"> Students Create & Show </Typography>
+        </AppBar>
 
+      <Grow in>
+        <Container>
+          <Grid container justify="space-between" alignItems="stretch">
+          <Grid item xs={12} sm={7}>
+          <AppBar className={classes.appBar} position="static" color="inherit">
+            <Student />
+          </AppBar>
+
+        </Grid>
+        <Grid item xs={12} sm={4}>
+        <AppBar className={classes.appBar} position="static" color="inherit">
+            <Create />
+          </AppBar>
+        </Grid>
+
+          </Grid>
+        </Container>
+      </Grow>
+
+      </Container>
+
+    </div>
   );
 }
 
