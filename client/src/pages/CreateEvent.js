@@ -115,8 +115,6 @@ const CreateEvent = () => {
             <Form.Control name="address" onChange={handleChange} placeholder="Address" value={input.address} />
           </Form.Group>
 
-<<<<<<< HEAD
-=======
           {/* City */}
           <Form.Group as={Col} className='my-3'>
             <Form.Label>City</Form.Label>
@@ -188,7 +186,6 @@ const CreateEvent = () => {
             <Form.Control name="zip" onChange={handleChange} placeholder="Zip" maxLength="5" value={input.zip} />
           </Form.Group>
 
->>>>>>> develop
           {/* Event Description */}
           <Form.Group className='my-3'>
             <Form.Label>Event Description</Form.Label>
