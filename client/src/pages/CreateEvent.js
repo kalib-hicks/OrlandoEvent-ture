@@ -4,10 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { Button, Form, Col, Container, Jumbotron } from 'react-bootstrap';
 import { QUERY_USER_EVENTS, QUERY_ME } from '../utils/queries';
 import { ADD_EVENT } from '../utils/mutations';
-<<<<<<< HEAD
-=======
 import Auth from '../utils/auth';
->>>>>>> develop
 
 const CreateEvent = () => {
   const defaultState = {
@@ -15,12 +12,9 @@ const CreateEvent = () => {
     date: '',
     time: '',
     address: '',
-<<<<<<< HEAD
-=======
     city: '',
     state: '',
     zip: '',
->>>>>>> develop
     description: ''
   };
 
@@ -69,8 +63,6 @@ const CreateEvent = () => {
     }
   };
 
-<<<<<<< HEAD
-=======
   if (!Auth.loggedIn()) {
     return (
       <h3 style={{ color: 'black', textAlign: 'center' }}>
@@ -78,7 +70,6 @@ const CreateEvent = () => {
       </h3>
     );
   };
->>>>>>> develop
 
   return (
     <Jumbotron fluid className='m-5'>
