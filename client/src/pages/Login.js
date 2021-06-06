@@ -36,7 +36,7 @@ function Login(props) {
         <div className="form-group">
           <label htmlFor="email">Email address:</label>
           <input
-            placeholder="youremail@test.com"
+            placeholder="email"
             className='form-control'
             name="email"
             type="email"
@@ -48,7 +48,7 @@ function Login(props) {
         <div className="form-group my-2">
           <label htmlFor="password">Password:</label>
           <input
-            placeholder="******"
+            placeholder="password"
             className='form-control'
             name="password"
             type="password"
