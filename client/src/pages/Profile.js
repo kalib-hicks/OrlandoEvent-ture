@@ -65,9 +65,9 @@ const Profile = () => {
                             <Image src={user.image} className='user-image' rounded />
                         </Col>    
                         <Col md={6}>
-                            <h1 >{user.username}</h1>
+                          <h1 >{user.username}</h1>
                             {userParam && (
-                                <Button variant='secondary' className='friend-btn' onClick={handleClick}>
+                                <Button variant='secondary' className='friend-btn'>
                                     
                                 </Button>
                             )}
