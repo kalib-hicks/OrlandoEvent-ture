@@ -100,7 +100,7 @@ function Event() {
           {Auth.loggedIn() &&
             <Button variant="success" onClick={handleRSVP}>RSVP</Button>
           }
-          <h5 className='mt-4'>People Attending: {event.attendanceCount}</h5>
+          <h5 className='mt-4'>RSVP: {event.attendanceCount}</h5>
           {Auth.loggedIn() &&
             <div>
               {event.attendanceCount > 0 && <AttendanceList attendees={event.attendees} />}

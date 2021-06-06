@@ -31,7 +31,7 @@ function Login(props) {
   return (
     <div className="container my-5 d-flex flex-column justify-content-center" id='login'>
 
-      <h2>Login</h2>
+      <h2></h2>
       <form onSubmit={handleFormSubmit}>
         <div className="form-group">
           <label htmlFor="email">Email address:</label>

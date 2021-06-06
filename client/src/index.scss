@@ -8,7 +8,7 @@ $light-grey: rgb(235, 235, 235);
 $mid-grey: rgb(105, 105, 105);
 $dark-grey: rgb(50, 50, 50);
 
-$font-family-base: "Courier New", sans-serif;
+$font-family-base: "Tahoma", sans-serif;
 
 $navbar-brand-font-size: 2rem;
 $nav-link-font-size: 1.25rem;
@@ -42,14 +42,14 @@ h6 {
 }
 
 .navbar {
-  background-color: $dark-blue;
+  background-color: $orange;
   z-index: 9999;
 }
 
 .navbar-brand {
-  font-family: "Courier New", serif;
+  font-family: "Tahoma", sans-serif;
   color: white;
-  text-align: center;
+  text-align: justify;
 }
 
 .social-icons {
@@ -58,7 +58,7 @@ h6 {
 
 #search {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   text-align: center;
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("./assets/images/orlando-fl.jpg");
@@ -306,9 +306,9 @@ h6 {
 }
 
 #login, #signup {
-  background-color: $light-grey;
-  height: 56rem;
-  width: 42rem;
+  background-color: $black;
+  height: 40rem;
+  width: 100rem;
   border-radius: 75px;
   display: flex;
   flex-direction: column;
