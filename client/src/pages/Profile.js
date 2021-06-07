@@ -62,7 +62,7 @@ const Profile = () => {
                 <div>
                     <Row className='w-100'>
                         <Col md={6}>
-                            <Image src={user.image} className='user-image' rounded />
+                            <Image src={user.image} className='user-image' />
                         </Col>    
                         <Col md={6}>
                             <h1 >{user.username}</h1>
@@ -89,7 +89,7 @@ const Profile = () => {
 
                     {/* Friends */}
                     <Accordion style={{ margin: 'auto' }} defaultActiveKey="0">
-                        <h2 style={{ margin: '20px auto', display: 'inline' }}>Friends</h2>
+                        <h2 style={{ margin: '20px auto', display: 'inline' }}></h2>
                         <Accordion.Toggle onClick={() => toggleActive('0')} variant="link" eventKey="0" className='toggle'>
                             <CaretDownFill />
                         </Accordion.Toggle>

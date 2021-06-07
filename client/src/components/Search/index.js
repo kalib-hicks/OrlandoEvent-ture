@@ -13,7 +13,7 @@ const Search = () => {
     const handleSearchSubmit = async event => {
         event.preventDefault();
         
-        history.push(`/results/${searchValue}`);
+        history.push(`/results/32822`);
     }
 
     return(
@@ -26,8 +26,8 @@ const Search = () => {
                         <InputGroup className='d-flex justify-content-center'>
                             <FormControl
                                 type='text'
-                                placeholder='Enter city to find events near you'
-                                aria-label='Search by Zipcode'
+                                placeholder=''
+                                aria-label=''
                                 value={searchValue}
                                 onChange={handleChange}
                             />
