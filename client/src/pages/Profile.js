@@ -60,19 +60,7 @@ const Profile = () => {
         <Jumbotron fluid className='my-5'>
             <Container id="profile">
                 <div>
-                    <Row className='w-100'>
-                        <Col md={6}>
-                            <Image src={user.image} className='user-image' />
-                        </Col>    
-                        <Col md={6}>
-                            <h1 ></h1>
-                            {userParam && (
-                                <Button variant='secondary' className='friend-btn' onClick={handleClick}>
-                                    
-                                </Button>
-                            )}
-                        </Col>    
-                    </Row>
+                    
 
                     {/* Created Events*/}
                     <Accordion style={{ margin: 'auto' }} defaultActiveKey="0">
