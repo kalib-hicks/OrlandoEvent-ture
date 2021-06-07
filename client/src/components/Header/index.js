@@ -9,8 +9,8 @@ const Header = () => {
     };
 
     return(
-        <Navbar variant='dark' expand="lg" className='d-flex justify-content-between px-3'>
-            <Navbar.Brand href="/">Orlando Adventures Await</Navbar.Brand>
+        <Navbar variant='dark' expand="lg" className='d-flex justify-content-center px-3'>
+            
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                 <Nav>
