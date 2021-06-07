@@ -7,7 +7,7 @@ import Auth from '../utils/auth';
 import { Button, Container, Jumbotron, Col, Accordion, Card, Row, Image } from 'react-bootstrap';
 import { CaretDownFill } from 'react-bootstrap-icons';
 import EventList from '../components/EventList';
-
+import FriendList from '../components/FriendList';
 
 const Profile = () => {
     const { username: userParam } = useParams();
@@ -33,20 +33,20 @@ const Profile = () => {
     if (!user?.username) {
         return (
             <h3 style={{ color: 'black', textAlign: 'center' }}>
-                Please log in to view this page.
+                You need to be logged in to see this page. Use the navigation links above to sign up or log in!
             </h3>
         );
     }
 
-    //const handleClick = async () => {
-      //  try {
-        //    await addFriend({
-        //        variables: { id: user._id }
-       //     });
-      //  } catch (e) {
-      //      console.error(e);
-       // }
-    //};
+    const handleClick = async () => {
+        try {
+            await addFriend({
+                variables: { id: user._id }
+            });
+        } catch (e) {
+            console.error(e);
+        }
+    };
 
     const toggleActive = (id) => {
         if (activeId === id) {
@@ -65,10 +65,10 @@ const Profile = () => {
                             <Image src={user.image} className='user-image' rounded />
                         </Col>    
                         <Col md={6}>
-                          <h1 >{user.username}</h1>
+                            <h1 >{user.username}</h1>
                             {userParam && (
-                                <Button variant='secondary' className='friend-btn'>
-                                    
+                                <Button variant='secondary' className='friend-btn' onClick={handleClick}>
+                                    Add Friend
                                 </Button>
                             )}
                         </Col>    
@@ -95,7 +95,11 @@ const Profile = () => {
                         </Accordion.Toggle>
                         <Card style={{ padding: 0, margin: '20px auto' }} className={activeId === '1' ? 'panel-wrap active-panel' : 'panel-wrap'}>
                             <Accordion.Collapse style={{ padding: 0, margin: 0 }} eventKey="0">
-                                
+                                <FriendList
+                                    username={user.username}
+                                    friendCount={user.friendCount}
+                                    friends={user.friends}
+                                />
                             </Accordion.Collapse>
                         </Card>
                     </Accordion>
