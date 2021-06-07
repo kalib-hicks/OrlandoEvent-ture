@@ -15,17 +15,18 @@ const Results = () => {
 
   const events = data?.searchEvents || {};
 
-  if (loading) {
-    return (
-      <div className='d-flex flex-column justify-content-center align-items-center'>
-        <Spinner animation='border' variant='primary' className='my-3' />
-        <h1 style={{ color: 'black', display: 'inline' }}>Loading...</h1>
-      </div>
-    );
-  }
+    if (loading) {
+        return(
+            <div className='d-flex flex-column justify-content-center align-items-center'>
+                <Spinner animation='border' variant='primary' className='my-3' />
+                <h1 style={{color: 'black', display: 'inline'}}>Loading...</h1>
+            </div>
+        );
+    }
 
   if (!events.length) {
-    return <CardDeck id="results" className='my-2 event-card w-100 h-100'><Card.Title>There aren't any events in this city yet</Card.Title></CardDeck>;
+    return <CardDeck id="results" className='my-2 event-card w-100 h-100'><Card.Title>There aren't any events in this city yet</Card.Title></CardDeck>
+
   }
 
 
@@ -55,11 +56,9 @@ const Results = () => {
                     </>
                   )}
                   <Card.Text>{event.description}</Card.Text>
-                  <Link to={`/event/${event._id}`} style={{ color: 'white', textDecoration: 'none' }}>
-                    <Button variant='primary'>
-                      View Event
+                  <Button variant='primary'>
+                    <Link to={`/event/${event._id}`} style={{ color: 'white', textDecoration: 'none' }}>View Event</Link>
                   </Button>
-                  </Link>
                 </Card.Body>
               </Card>
             ))}
