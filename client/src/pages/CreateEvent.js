@@ -72,19 +72,13 @@ const CreateEvent = () => {
     <Jumbotron fluid className='m-5'>
       <Container id="create">
         <h1 >Create Event</h1>
+        
         <Form onSubmit={handleFormSubmit}>
           {/* Event Name */}
           <Form.Group as={Col} >
             <Form.Label>Event Name</Form.Label>
             <Form.Control name="name" onChange={handleChange} type="text" placeholder="Event Name" value={input.name} />
           </Form.Group>
-
-      {/* Address */}
-      <Form.Group as={Col} className='my-3'>
-            <Form.Label>Address</Form.Label>
-            <Form.Control name="address" onChange={handleChange} placeholder="Address" value={input.address} />
-          </Form.Group>
-
 
           {/* Date Picker */}
           <Form.Group className='my-3'>
@@ -110,11 +104,15 @@ const CreateEvent = () => {
             />
           </Form.Group>
 
-          
+          {/* Address */}
+          <Form.Group as={Col} className='my-3'>
+            <Form.Label>Address</Form.Label>
+            <Form.Control name="address" onChange={handleChange} placeholder="Address" value={input.address} />
+          </Form.Group>
 
           {/* Event Description */}
           <Form.Group className='my-3'>
-            <Form.Label>Description</Form.Label>
+            <Form.Label>Event Description</Form.Label>
             <Form.Control name="description" onChange={handleChange} placeholder="Tell us about your event" as="textarea" rows={8} value={input.description} />
           </Form.Group>
 
