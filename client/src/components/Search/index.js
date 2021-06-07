@@ -20,7 +20,7 @@ const Search = () => {
         <Jumbotron className='mb-5'>
             <Container id='search' className='d-flex flex-column justify-content-center align-items-center' fluid>
                 <div>
-                    <h2>Find fun adventures<br /> in the city of Orlando!</h2>
+                    <h2>Orlando Event-tures await!</h2>
                     
                     <Form onSubmit={handleSearchSubmit}>
                         <InputGroup className='d-flex justify-content-center'>
