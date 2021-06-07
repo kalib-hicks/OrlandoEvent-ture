@@ -21,7 +21,7 @@ const CommentList = ( {comments, commentCount} ) => {
                 <Card>
                     <Card.Body>
                         <Card.Title>
-                            Be the first to leave a comment!
+                            Leave a message!
                         </Card.Title>
                     </Card.Body>
                 </Card>
