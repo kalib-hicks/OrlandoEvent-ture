@@ -38,7 +38,15 @@ const Profile = () => {
         );
     }
 
-   
+    const handleClick = async () => {
+        try {
+            await addFriend({
+                variables: { id: user._id }
+            });
+        } catch (e) {
+            console.error(e);
+        }
+    };
 
     const toggleActive = (id) => {
         if (activeId === id) {
