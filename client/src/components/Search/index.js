@@ -22,7 +22,7 @@ const Search = () => {
                 <div>
                     <h2>Find Event-tures in Orlando!</h2>
                     
-                    <Form onSubmit={handleSearchSubmit}>
+                    <Form onClick={handleSearchSubmit}>
                         <InputGroup className='d-flex justify-content-center'>
                             <FormControl
                                 type='text'
@@ -31,7 +31,11 @@ const Search = () => {
                                 value={searchValue}
                                 onChange={handleChange}
                             />
-                         
+                            <InputGroup.Append>
+                                <Button variant='secondary' className='search-btn' type='submit' style={{color: 'white', textDecoration:'none'}}>
+                                    Get Started
+                                </Button>
+                            </InputGroup.Append>
                         </InputGroup>
                     </Form>
                 </div>
