@@ -7,7 +7,7 @@ import Auth from '../utils/auth';
 import { Button, Container, Jumbotron, Col, Accordion, Card, Row, Image } from 'react-bootstrap';
 import { CaretDownFill } from 'react-bootstrap-icons';
 import EventList from '../components/EventList';
-
+import FriendList from '../components/FriendList';
 
 const Profile = () => {
     const { username: userParam } = useParams();
@@ -66,7 +66,11 @@ const Profile = () => {
                         </Col>    
                         <Col md={6}>
                             <h1 >{user.username}</h1>
-                            
+                            {userParam && (
+                                <Button variant='secondary' className='friend-btn' onClick={handleClick}>
+                                    Add Friend
+                                </Button>
+                            )}
                         </Col>    
                     </Row>
 
@@ -91,7 +95,11 @@ const Profile = () => {
                         </Accordion.Toggle>
                         <Card style={{ padding: 0, margin: '20px auto' }} className={activeId === '1' ? 'panel-wrap active-panel' : 'panel-wrap'}>
                             <Accordion.Collapse style={{ padding: 0, margin: 0 }} eventKey="0">
-                                
+                                <FriendList
+                                    username={user.username}
+                                    friendCount={user.friendCount}
+                                    friends={user.friends}
+                                />
                             </Accordion.Collapse>
                         </Card>
                     </Accordion>
