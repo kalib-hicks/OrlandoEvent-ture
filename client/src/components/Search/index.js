@@ -7,7 +7,7 @@ const Search = () => {
     const [searchValue, setSearchValue] = useState('');
 
     const handleChange = event => {
-        setSearchValue(event.target.value);
+        setSearchValue('32822');
     }
 
     const handleSearchSubmit = async event => {
@@ -33,7 +33,7 @@ const Search = () => {
                             />
                             <InputGroup.Append>
                                 <Button variant='secondary' className='search-btn' type='submit' style={{color: 'white', textDecoration:'none'}}>
-                                    Search
+                                    Get Started
                                 </Button>
                             </InputGroup.Append>
                         </InputGroup>
