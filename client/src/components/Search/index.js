@@ -6,11 +6,12 @@ const Search = () => {
     const history = useHistory();
     const [searchValue, setSearchValue] = useState('');
 
-    const handleChange = event => {
-        setSearchValue('32822');
-    }
+    //const handleChange = event => {
+        
+    //}
 
     const handleSearchSubmit = async event => {
+        setSearchValue('32822');
         event.preventDefault();
         
         history.push(`/results/${searchValue}`);
