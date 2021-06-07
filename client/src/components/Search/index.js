@@ -26,13 +26,13 @@ const Search = () => {
                         <InputGroup className='d-flex justify-content-center'>
                             <FormControl
                                 type='text'
-                                placeholder=''
+                                placeholder='Enter an Orlando Zipcode'
                                 aria-label=''
                                 value={searchValue}
                                 onChange={handleChange}
                             />
                             <InputGroup.Append>
-                                <Button variant='secondary' className='search-btn' type='submit' style={{color: 'white', textDecoration:'none'}}>
+                            <Button variant='secondary' className='search-btn' type='submit' style={{color: 'white', textDecoration:'none'}}>
                                     Search
                                 </Button>
                             </InputGroup.Append>
