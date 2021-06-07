@@ -22,7 +22,7 @@ const Search = () => {
                 <div>
                     <h2>Find Event-tures in Orlando!</h2>
                     
-                    <Form onClick={handleSearchSubmit}>
+                    <Form onSubmit={handleSearchSubmit}>
                         <InputGroup className='d-flex justify-content-center'>
                             <FormControl
                                 type='text'
