@@ -32,7 +32,7 @@ const Profile = () => {
 
     if (!user?.username) {
         return (
-            <h3 style={{ color: 'black', textAlign: 'center' }}>
+            <h3 style={{ color: 'black', textAlign: 'left' }}>
                 You need to be logged in to see this page. Use the navigation links above to sign up or log in!
             </h3>
         );
@@ -68,7 +68,7 @@ const Profile = () => {
                             <h1 >{user.username}</h1>
                             {userParam && (
                                 <Button variant='secondary' className='friend-btn' onClick={handleClick}>
-                                    Add Friend
+                                    
                                 </Button>
                             )}
                         </Col>    
