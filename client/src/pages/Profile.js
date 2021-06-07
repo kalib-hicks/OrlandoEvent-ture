@@ -91,11 +91,7 @@ const Profile = () => {
                         </Accordion.Toggle>
                         <Card style={{ padding: 0, margin: '20px auto' }} className={activeId === '1' ? 'panel-wrap active-panel' : 'panel-wrap'}>
                             <Accordion.Collapse style={{ padding: 0, margin: 0 }} eventKey="0">
-                                <FriendList
-                                    username={user.username}
-                                    friendCount={user.friendCount}
-                                    friends={user.friends}
-                                />
+                                
                             </Accordion.Collapse>
                         </Card>
                     </Accordion>
