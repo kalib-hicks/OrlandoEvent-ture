@@ -64,11 +64,11 @@ h6 {
     url("./assets/images/orlando-fl.jpg");
   background-size: cover;
   background-position: top 100% right 100%;
-  color: white;
-  padding: -20px 0 -50px 0;
+  color: grey;
+  padding: -80px 0 -120px 0;
 
   div {
-    background-color: $light-grey;
+    background-color: $dark-blue;
     color: $dark-grey;
     border-radius: 20px;
     padding: 1.5rem;
@@ -198,7 +198,7 @@ h6 {
     background-color: $light-grey;
     color: $dark-grey;
     border-radius: 100px;
-    padding: 200px;
+    padding: 50px;
 
     .user-image {
       width: 100%;
@@ -239,7 +239,7 @@ h6 {
   align-items: left;
   background-color: $orange;
   padding: 60px;
-  border-radius: 80px;
+  border-radius: 60px;
 
   .event-details {
     flex-direction: column;
