@@ -6,14 +6,14 @@ const Search = () => {
     const history = useHistory();
     const [searchValue, setSearchValue] = useState('');
 
-    const handleChange = event => {
-        setSearchValue('32822');
-    }
+   // const handleChange = event => {
+       // setSearchValue('32822');
+   // }
 
     const handleSearchSubmit = async event => {
         setSearchValue('32822');
         event.preventDefault();
-        
+        setSearchValue('32822');
         history.push(`/results/${searchValue}`);
     }
 
@@ -30,7 +30,7 @@ const Search = () => {
                                 placeholder='Enter city to find events near you'
                                 aria-label='Search by Zipcode'
                                 value={searchValue}
-                                onClick={handleChange}
+                                onClick={handleSearchSubmit}
                             />
                             <InputGroup.Append>
                                 <Button variant='secondary' className='search-btn' type='submit' style={{color: 'white', textDecoration:'none'}}>
