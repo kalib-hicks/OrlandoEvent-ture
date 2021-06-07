@@ -1,6 +1,6 @@
 import React from 'react';
-import { GoogleMap, useLoadScript} from '@react-google-maps/api';
-// import { geoCode } from '../../utils/API';
+import { GoogleMap, useLoadScript, withGoogleMap, Marker } from '@react-google-maps/api';
+import { geoCode } from '../../utils/API';
 
 const mapContainerStyle = {
     width: '100%',
@@ -18,7 +18,22 @@ const options = {
 }
 
 const ResultsMap = props => {
-    
+    const {mapData} = props;
+
+    // const getGeoCode = async (city) => {
+    //     const response = await geoCode(city);
+
+    //     const { coordinates } = await response.json();
+
+    //     // console.log(coordinates);
+    // }
+
+    // const returnedData = mapData.map(event => {
+    //     // console.log(event.address + ' ' + event.city + ' ' + event.state)
+    //     getGeoCode(event)
+    // });
+
+    // console.log(returnedData);
 
 
     const { isLoaded, loadError } = useLoadScript({
