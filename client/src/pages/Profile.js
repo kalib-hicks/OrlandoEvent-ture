@@ -7,7 +7,7 @@ import Auth from '../utils/auth';
 import { Button, Container, Jumbotron, Col, Accordion, Card, Row, Image } from 'react-bootstrap';
 import { CaretDownFill } from 'react-bootstrap-icons';
 import EventList from '../components/EventList';
-import FriendList from '../components/FriendList';
+
 
 const Profile = () => {
     const { username: userParam } = useParams();
@@ -67,9 +67,7 @@ const Profile = () => {
                         <Col md={6}>
                             <h1 >{user.username}</h1>
                             {userParam && (
-                                <Button variant='secondary' className='friend-btn' onClick={handleClick}>
-                                    Add Friend
-                                </Button>
+                               
                             )}
                         </Col>    
                     </Row>
