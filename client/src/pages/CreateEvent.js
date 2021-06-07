@@ -97,7 +97,7 @@ const CreateEvent = () => {
 
           {/* time */}
           <Form.Group className='my-3'>
-            <Form.Label>Time</Form.Label>
+            <Form.Label>Time of Event</Form.Label>
             <Form.Control
               onChange={handleChange}
               type="time"
@@ -109,21 +109,15 @@ const CreateEvent = () => {
 
           {/* Address */}
           <Form.Group as={Col} className='my-3'>
-            <Form.Label>Address</Form.Label>
+            <Form.Label>Event Location</Form.Label>
             <Form.Control name="address" onChange={handleChange} placeholder="Address" value={input.address} />
-          </Form.Group>
-
-          {/* City */}
-          <Form.Group as={Col} className='my-3'>
-            <Form.Label>City</Form.Label>
-            <Form.Control name="city" onChange={handleChange} placeholder="City" value={input.city} />
           </Form.Group>
 
           
 
           {/* Zip */}
           <Form.Group as={Col} className='my-3'>
-            <Form.Label>Zip</Form.Label>
+            <Form.Label>Zipcode</Form.Label>
             <Form.Control name="zip" onChange={handleChange} placeholder="Zip" maxLength="5" value={input.zip} />
           </Form.Group>
 
