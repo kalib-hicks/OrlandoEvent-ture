@@ -59,7 +59,7 @@ const Profile = () => {
     return (
         <Jumbotron fluid className='my-5'>
             <Container id="profile">
-                <div>
+                <div style="background-color:yellow;">
                     <Row className='w-100'>
                         <Col md={6}>
                             <Image src={user.image} className='user-image' />
@@ -76,7 +76,7 @@ const Profile = () => {
 
                     {/* Created Events*/}
                     <Accordion style={{ margin: 'auto' }} defaultActiveKey="0">
-                        <h2 style={{ margin: '10px auto', display: 'inline' }}>Created Events</h2>
+                        <h2 style={{ color: 'orange', margin: '10px auto', display: 'inline' }}>Created Events</h2>
                         <Accordion.Toggle onClick={() => toggleActive('0')} variant="link" eventKey="0" className='toggle'>
                             <CaretDownFill />
                         </Accordion.Toggle>
