@@ -66,9 +66,7 @@ const Profile = () => {
                         </Col>    
                         <Col md={6}>
                             <h1 >{user.username}</h1>
-                            {userParam && (
-                               
-                            )}
+                            
                         </Col>    
                     </Row>
 
