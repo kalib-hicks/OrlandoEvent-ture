@@ -66,7 +66,7 @@ const CreateEvent = () => {
   if (!Auth.loggedIn()) {
     return (
       <h3 style={{ color: 'black', textAlign: 'center' }}>
-          You need to be logged in to see this page. Use the navigation links above to sign up or log in!
+          Please login to view
       </h3>
     );
   };
@@ -75,9 +75,7 @@ const CreateEvent = () => {
     <Jumbotron fluid className='m-5'>
       <Container id="create">
         <h1 >Create Event</h1>
-        <p>
-          Fill in the information below to let everyone know you are hosting a clean up!
-        </p>
+        
         <Form onSubmit={handleFormSubmit}>
           {/* Event Name */}
           <Form.Group as={Col} >
