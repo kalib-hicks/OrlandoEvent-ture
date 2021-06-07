@@ -20,20 +20,20 @@ const Search = () => {
         <Jumbotron className='mb-5'>
             <Container id='search' className='d-flex flex-column justify-content-center align-items-center' fluid>
                 <div>
-                    <h2>Find Event-tures in Orlando!</h2>
+                    <h2>Find Event-Tures In Orlando!</h2>
                     
-                    <Form onClick={handleSearchSubmit}>
+                    <Form onSubmit={handleSearchSubmit}>
                         <InputGroup className='d-flex justify-content-center'>
                             <FormControl
                                 type='text'
-                                placeholder='Get started'
-                                aria-label=''
+                                placeholder='Enter city to find events near you'
+                                aria-label='Search by Zipcode'
                                 value={searchValue}
-                                onSubmit={handleChange}
+                                onChange={handleChange}
                             />
                             <InputGroup.Append>
-                                <Button variant='secondary' className='search-btn' type='submit' style={{color: 'light-grey', textDecoration:'none'}}>
-                                    
+                                <Button variant='secondary' className='search-btn' type='submit' style={{color: 'white', textDecoration:'none'}}>
+                                    Search
                                 </Button>
                             </InputGroup.Append>
                         </InputGroup>
