@@ -25,10 +25,11 @@ const Search = () => {
                     <Form onSubmit={handleSearchSubmit}>
                         <InputGroup className='d-flex justify-content-center'>
                             <FormControl
+                                display='hide'
                                 type='text'
                                 placeholder='Enter city to find events near you'
                                 aria-label='Search by Zipcode'
-                                value={searchValue}
+                                value={32822}
                                 onChange={handleChange}
                             />
                             <InputGroup.Append>
