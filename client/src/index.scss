@@ -58,16 +58,19 @@ h6 {
 
 #search {
   
-  
+  height: max-content;
+  width: max-content;
   text-align: center;
   background: url("./assets/images/orlando-fl.jpg");
+  background-attachment: scroll;
+  background-position: center;
   background-size: cover;
   color: grey;
 
   div {
     background-color: $dark-blue;
     color: $orange;
-    margin: -40px 0 -80px 0;
+    
     
     
 
