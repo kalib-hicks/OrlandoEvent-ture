@@ -9,10 +9,10 @@ const Header = () => {
     };
 
     return(
-        <Navbar variant='dark' expand="lg" className='d-flex justify-content-left px-3'>
+        <Navbar variant='dark' expand="lg" className='d-flex justify-content-between px-3'>
             
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" className="justify-content-left">
+            <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
                 <Nav>
                     <Nav.Link href="/">Search</Nav.Link>
                     {Auth.loggedIn() ? (

@@ -29,7 +29,7 @@ const Search = () => {
                                 placeholder='Get started'
                                 aria-label=''
                                 value={searchValue}
-                                onClick={handleChange}
+                                onSubmit={handleChange}
                             />
                             <InputGroup.Append>
                                 <Button variant='secondary' className='search-btn' type='submit' style={{color: 'light-grey', textDecoration:'none'}}>
