@@ -11,7 +11,6 @@ const Search = () => {
     }
 
     const handleSearchSubmit = async event => {
-        
         event.preventDefault();
         
         history.push(`/results/${searchValue}`);
@@ -23,20 +22,16 @@ const Search = () => {
                 <div>
                     <h2>Find Event-tures in Orlando!</h2>
                     
-                    <Form onClick={handleSearchSubmit}>
+                    <Form onSubmit={handleSearchSubmit}>
                         <InputGroup className='d-flex justify-content-center'>
                             <FormControl
                                 type='text'
-                                placeholder=''
-                                aria-label=''
+                                placeholder='Enter city to find events near you'
+                                aria-label='Search by Zipcode'
                                 value={searchValue}
-                                onClick={handleChange}
+                                onChange={handleChange}
                             />
-                            <InputGroup.Append>
-                                <Button variant='secondary' className='search-btn' type='submit' style={{color: 'white', textDecoration:'none'}}>
-                                    Get Started
-                                </Button>
-                            </InputGroup.Append>
+                         
                         </InputGroup>
                     </Form>
                 </div>
