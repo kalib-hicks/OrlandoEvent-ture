@@ -7,7 +7,7 @@ import Auth from '../utils/auth';
 import { Button, Container, Jumbotron, Col, Accordion, Card, Row, Image } from 'react-bootstrap';
 import { CaretDownFill } from 'react-bootstrap-icons';
 import EventList from '../components/EventList';
-import FriendList from '../components/FriendList';
+
 
 const Profile = () => {
     const { username: userParam } = useParams();
@@ -38,15 +38,7 @@ const Profile = () => {
         );
     }
 
-    const handleClick = async () => {
-        try {
-            await addFriend({
-                variables: { id: user._id }
-            });
-        } catch (e) {
-            console.error(e);
-        }
-    };
+   
 
     const toggleActive = (id) => {
         if (activeId === id) {
@@ -87,22 +79,7 @@ const Profile = () => {
                         </Card>
                     </Accordion>
 
-                    {/* Friends */}
-                    <Accordion style={{ margin: 'auto' }} defaultActiveKey="0">
-                        <h2 style={{ margin: '20px auto', display: 'inline' }}></h2>
-                        <Accordion.Toggle onClick={() => toggleActive('0')} variant="link" eventKey="0" className='toggle'>
-                            <CaretDownFill />
-                        </Accordion.Toggle>
-                        <Card style={{ padding: 0, margin: '20px auto' }} className={activeId === '1' ? 'panel-wrap active-panel' : 'panel-wrap'}>
-                            <Accordion.Collapse style={{ padding: 0, margin: 0 }} eventKey="0">
-                                <FriendList
-                                    username={user.username}
-                                    friendCount={user.friendCount}
-                                    friends={user.friends}
-                                />
-                            </Accordion.Collapse>
-                        </Card>
-                    </Accordion>
+                   
                 </div>
             </Container>
         </Jumbotron >
