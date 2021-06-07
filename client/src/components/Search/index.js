@@ -24,14 +24,15 @@ const Search = () => {
                     
                     <Form onSubmit={handleSearchSubmit}>
                         <InputGroup className='d-flex justify-content-center'>
+                           <div style="visibility: hidden">
                             <FormControl
-                                display='hide'
                                 type='text'
                                 placeholder='Enter city to find events near you'
                                 aria-label='Search by Zipcode'
-                                value={32822}
+                                value={searchValue}
                                 onChange={handleChange}
                             />
+                            </div>
                             <InputGroup.Append>
                                 <Button variant='secondary' className='search-btn' type='submit' style={{color: 'white', textDecoration:'none'}}>
                                     Get Started
